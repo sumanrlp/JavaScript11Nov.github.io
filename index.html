@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS2</title>
+        <style>
+            body {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            }
+            #main {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                margin-top: 5vw;
+                border: 2px solid black;
+                padding: 2vw;
+                width: 30vw;
+                background-color: cadetblue;
+                box-shadow: 0 0 5px black;
+            }
+            #main2 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                margin-top: 5vw;
+                border: 2px solid black;
+                padding: 2vw;
+                width: 30vw;
+                background-color: rgb(205, 112, 241);
+                box-shadow: 0 0 5px black;
+            }
+            #button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            button{
+                margin: 1vw;
+            }
+        </style>
+
+        <script>
+            function fn1() {
+                var inRef = document.getElementById('in')
+                var hRef = document.getElementById('h1')
+                hRef.innerText = ''
+                var name = inRef.value 
+                if(hRef.innerText=='') {
+                    hRef.innerText = ("Good Morning "+name)
+                    hRef.style.color = "yellow"
+                }
+                
+            }
+            function fn2() {
+                var inRef = document.getElementById('in')
+                var hRef = document.getElementById('h1')
+                hRef.innerText = ''
+                var name = inRef.value 
+                if(hRef.innerText=='') {
+                    hRef.innerText = ("Good Afternoon "+name)
+                    hRef.style.color = "red"
+                }
+                
+            }
+            function fn3() {
+                var inRef = document.getElementById('in')
+                var hRef = document.getElementById('h1')
+                hRef.innerText = ''
+                var name = inRef.value 
+                if(hRef.innerText=='') {
+                    hRef.innerText = ("Good Evening "+name)
+                    hRef.style.color = "orange"
+                }
+                
+            }
+
+            function fn() {
+            var inRef = document.getElementById('in1')
+            var buttonRef = document.getElementById('btn')
+
+            if(inRef.type == "password") {
+                inRef.type = "text"
+                buttonRef.innerText = "Hide Password"
+            } else {
+                inRef.type = "password"
+                buttonRef.innerText = "Show password"
+            }
+
+        }
+        </script>
+    </head>
+    <body>
+        <div id="main">
+            <div id="input">
+                <label for="">Enter your Name</label>
+                <input type="text" id="in" value="Rushikesh">
+                <h2 id="h1"></h2>
+            </div>
+            <div id="button">
+                <button onclick="fn1()">Good Morning</button>
+                <button onclick="fn2()">Good Afternoon</button>
+                <button onclick="fn3()">Good Evening</button>
+            </div>
+        </div>
+
+        <div id="main2">
+            <label for="">Enter Text:</label>
+            <input type="password" id="in1" value="">
+            <button id="btn" onclick="fn()">Show password</button>
+        </div>
+    </body>
+</html>
